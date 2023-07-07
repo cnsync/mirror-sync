@@ -40,7 +40,7 @@ func main() {
 			},
 			&cli.StringFlag{
 				Name:  "hub",
-				Value: "docker.io/cnxyz",
+				Value: "docker.io/cnsync",
 				Usage: "destination hub for synchronization",
 			},
 		},
