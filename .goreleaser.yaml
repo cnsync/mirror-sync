@@ -1,0 +1,27 @@
+project_name: image-sync
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: auto
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+
+checksum:
+  name_template: '{{ .ProjectName }}_{{ .Version }}_checksums.txt'
+
+archives:
+  - id: auto
+    builds:
+      - auto
+    format_overrides:
+      - goos: windows
+        format: zip
