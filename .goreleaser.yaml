@@ -1,4 +1,4 @@
-project_name: image-sync
+project_name: mirror-sync
 
 before:
   hooks:
