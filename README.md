@@ -22,6 +22,6 @@ COMMANDS:
 GLOBAL OPTIONS:
    --mirror value       要同步的镜像的名称存储地址 (default: "https://raw.githubusercontent.com/cnsync/mirror-sync/main/mirrors-docker.txt")
    --concurrency value  并发请求数 (default: 5)
-   --hub value          需要同步的目的仓库 (default: "docker.io/cnxyz")
+   --hub value          需要同步的目的仓库 (default: "docker.io/cnsync")
    --help, -h           show help
 ```
