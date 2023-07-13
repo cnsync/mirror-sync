@@ -22,6 +22,8 @@ docker.io/library/nginx
 docker.io/library/busybox
 docker.io/library/redis
 docker.io/library/mongo
+docker.io/library/maven
+docker.io/library/docker
 docker.io/library/mysql
 docker.io/library/golang
 docker.io/library/traefik
@@ -38,3 +40,4 @@ docker.io/flannelcni/flannel-cni-plugin
 docker.io/jenkins/jenkins
 docker.io/gogs/gogs
 docker.io/snowdreamtech/frpc
+docker.io/sonatype/nexus3
