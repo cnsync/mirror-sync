@@ -19,6 +19,10 @@ quay.io/jetstack/cert-manager-cainjector
 quay.io/jetstack/cert-manager-acmesolver
 quay.io/jetstack/cert-manager-ctl
 docker.io/library/nginx
+docker.io/library/busybox
+docker.io/library/redis
+docker.io/library/mongo
+docker.io/library/mysql
 docker.io/library/traefik
 docker.io/library/haproxy
 docker.io/osixia/keepalived
