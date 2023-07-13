@@ -11,3 +11,10 @@ registry.k8s.io/kube-state-metrics/kube-state-metrics
 registry.k8s.io/ingress-nginx/controller
 registry.k8s.io/ingress-nginx/kube-webhook-certgen
 registry.k8s.io/sig-storage/nfs-subdir-external-provisioner
+ghcr.io/dexidp/dex
+quay.io/argoproj/argocd
+quay.io/jetstack/cert-manager-webhook
+quay.io/jetstack/cert-manager-controller
+quay.io/jetstack/cert-manager-cainjector
+quay.io/jetstack/cert-manager-acmesolver
+quay.io/jetstack/cert-manager-ctl
