@@ -52,3 +52,5 @@ docker.io/kubernetesui/dashboard
 docker.io/kubernetesui/dashboard-api
 docker.io/kubernetesui/dashboard-web
 docker.io/kubernetesui/metrics-scraper
+docker.io/prom/prometheus
+docker.io/grafana/grafana
