@@ -45,6 +45,7 @@ registry.k8s.io/sig-storage/csi-snapshotter
 registry.k8s.io/sig-storage/csi-node-driver-registrar
 quay.io/cephcsi/cephcsi
 docker.io/jenkins/jenkins
+docker.io/jenkins/inbound-agent
 docker.io/gogs/gogs
 docker.io/snowdreamtech/frpc
 docker.io/sonatype/nexus3
