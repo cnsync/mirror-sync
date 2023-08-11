@@ -109,7 +109,7 @@ func syncImages(mirrorCtx []string, hub string, maxConcurrency int) {
 func getValidTags(tags []string) []string {
 	var validTags []string
 	for _, tag := range tags {
-		if !strings.Contains(tag, ".sig") {
+		if !strings.Contains(tag, ".sig") && !strings.Contains(tag, ".att") {
 			validTags = append(validTags, tag)
 		}
 	}
