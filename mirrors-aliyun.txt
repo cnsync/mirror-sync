@@ -19,17 +19,6 @@ quay.io/jetstack/cert-manager-controller
 quay.io/jetstack/cert-manager-cainjector
 quay.io/jetstack/cert-manager-acmesolver
 quay.io/jetstack/cert-manager-ctl
-docker.io/library/nginx
-docker.io/library/busybox
-docker.io/library/redis
-docker.io/library/mongo
-docker.io/library/maven
-docker.io/library/docker
-docker.io/library/mysql
-docker.io/library/golang
-docker.io/library/traefik
-docker.io/library/haproxy
-docker.io/library/alpine
 docker.io/osixia/keepalived
 docker.io/calico/ctl
 docker.io/calico/cni
