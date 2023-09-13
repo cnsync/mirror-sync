@@ -49,4 +49,3 @@ docker.io/prom/alertmanager
 docker.io/prom/node-exporter
 docker.io/grafana/grafana
 docker.io/openresty/openresty
-docker.io/envoyproxy/envoy
