@@ -46,8 +46,17 @@ func main() {
 		},
 		Action: func(c *cli.Context) error {
 			body := httpclient(c.String("mirror"))
-			mirrorCtx := strings.Split(body, "\n")
-			syncImages(mirrorCtx, c.String("hub"), c.Int("concurrency"))
+			lines := strings.Split(body, "\n")
+
+			// 去除数组中的空行
+			var nonEmptyLines []string
+			for _, line := range lines {
+				if strings.TrimSpace(line) != "" {
+					nonEmptyLines = append(nonEmptyLines, line)
+				}
+			}
+
+			syncImages(nonEmptyLines, c.String("hub"), c.Int("concurrency"))
 			return nil
 		},
 	}
@@ -65,39 +74,40 @@ func syncImages(mirrorCtx []string, hub string, maxConcurrency int) {
 	for _, cmd := range mirrorCtx {
 		// 获取源镜像的仓库和标签列表
 		srcRepo, srcTags := listTags(cmd)
+
 		if srcRepo == "" {
 			log.Println("Empty tags for command:", cmd)
-		}
-
-		// 获取源镜像和目标镜像的名称
-		srcRe, destRe := getImageNames(srcRepo, hub)
-		_, destTag := listTags(destRe)
-
-		if destTag != nil {
-			// 去除重复的标签，并获取有效的标签列表
-			FinalTags = removeDuplicates(srcTags, destTag)
-			for _, tag := range getValidTags(FinalTags) {
-				wg.Add(1)
-				semaphore <- struct{}{} // 申请一个信号量，限制并发数
-				go func(src, dest, t string) {
-					defer func() {
-						<-semaphore // 释放信号量
-						wg.Done()
-					}()
-					copyImage(src, dest, t)
-				}(srcRe, destRe, tag)
-			}
 		} else {
-			for _, tag := range getValidTags(srcTags) {
-				wg.Add(1)
-				semaphore <- struct{}{} // 申请一个信号量，限制并发数
-				go func(src, dest, t string) {
-					defer func() {
-						<-semaphore // 释放信号量
-						wg.Done()
-					}()
-					copyImage(src, dest, t)
-				}(srcRe, destRe, tag)
+			// 获取源镜像和目标镜像的名称
+			srcRe, destRe := getImageNames(srcRepo, hub)
+			_, destTag := listTags(destRe)
+
+			if destTag != nil {
+				// 去除重复的标签，并获取有效的标签列表
+				FinalTags = removeDuplicates(srcTags, destTag)
+				for _, tag := range getValidTags(FinalTags) {
+					wg.Add(1)
+					semaphore <- struct{}{} // 申请一个信号量，限制并发数
+					go func(src, dest, t string) {
+						defer func() {
+							<-semaphore // 释放信号量
+							wg.Done()
+						}()
+						copyImage(src, dest, t)
+					}(srcRe, destRe, tag)
+				}
+			} else {
+				for _, tag := range getValidTags(srcTags) {
+					wg.Add(1)
+					semaphore <- struct{}{} // 申请一个信号量，限制并发数
+					go func(src, dest, t string) {
+						defer func() {
+							<-semaphore // 释放信号量
+							wg.Done()
+						}()
+						copyImage(src, dest, t)
+					}(srcRe, destRe, tag)
+				}
 			}
 		}
 	}
