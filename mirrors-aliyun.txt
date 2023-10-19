@@ -26,6 +26,7 @@ quay.io/jetstack/cert-manager-cainjector
 quay.io/jetstack/cert-manager-acmesolver
 quay.io/jetstack/cert-manager-ctl
 quay.io/cephcsi/cephcsi
+docker.io/redis
 docker.io/osixia/keepalived
 docker.io/calico/ctl
 docker.io/calico/cni
