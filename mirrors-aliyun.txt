@@ -49,3 +49,6 @@ docker.io/prom/prometheus
 docker.io/prom/alertmanager
 docker.io/prom/node-exporter
 docker.io/grafana/grafana
+docker.io/sameersbn/redis
+docker.io/sameersbn/postgresql
+docker.io/sameersbn/gitlab
