@@ -50,5 +50,6 @@ docker.io/prom/alertmanager
 docker.io/prom/node-exporter
 docker.io/grafana/grafana
 docker.io/sameersbn/redis
+gcr.io/kaniko-project/executor
 docker.io/sameersbn/postgresql
 docker.io/sameersbn/gitlab
