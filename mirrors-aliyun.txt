@@ -54,3 +54,4 @@ gcr.io/kaniko-project/executor
 gcr.io/go-containerregistry/crane/debug
 docker.io/sameersbn/postgresql
 docker.io/sameersbn/gitlab
+ghcr.io/external-secrets/external-secrets
