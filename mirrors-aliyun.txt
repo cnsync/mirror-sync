@@ -26,6 +26,12 @@ quay.io/jetstack/cert-manager-cainjector
 quay.io/jetstack/cert-manager-acmesolver
 quay.io/jetstack/cert-manager-ctl
 quay.io/cephcsi/cephcsi
+quay.io/minio/mc
+quay.io/prometheus-operator/prometheus-config-reloader
+quay.io/prometheus-operator/prometheus-operator
+quay.io/prometheus/node-exporter
+quay.io/prometheus/prometheus
+quay.io/thanos/thanos
 docker.io/redis
 docker.io/osixia/keepalived
 docker.io/calico/ctl
