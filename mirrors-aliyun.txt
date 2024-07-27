@@ -34,6 +34,7 @@ quay.io/prometheus/node-exporter
 quay.io/prometheus/prometheus
 quay.io/thanos/thanos
 docker.io/redis
+docker.io/mysql
 docker.io/osixia/keepalived
 docker.io/calico/ctl
 docker.io/calico/cni
