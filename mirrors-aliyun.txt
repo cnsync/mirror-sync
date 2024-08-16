@@ -1,3 +1,4 @@
+docker.io/rancher/local-path-provisioner
 registry.k8s.io/etcd
 registry.k8s.io/pause
 registry.k8s.io/coredns
@@ -66,4 +67,3 @@ gcr.io/go-containerregistry/crane/debug
 docker.io/sameersbn/postgresql
 docker.io/sameersbn/gitlab
 ghcr.io/external-secrets/external-secrets
-docker.io/rancher/local-path-provisioner
