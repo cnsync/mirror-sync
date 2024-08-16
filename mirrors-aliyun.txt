@@ -33,8 +33,15 @@ quay.io/prometheus-operator/prometheus-operator
 quay.io/prometheus/node-exporter
 quay.io/prometheus/prometheus
 quay.io/thanos/thanos
+docker.io/busybox
+docker.io/alpine
+docker.io/nginx
+docker.io/traefik
+docker.io/haproxy
 docker.io/redis
 docker.io/mysql
+docker.io/mongo
+docker.io/golang
 docker.io/osixia/keepalived
 docker.io/calico/ctl
 docker.io/calico/cni
