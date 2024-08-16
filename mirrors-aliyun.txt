@@ -56,10 +56,6 @@ docker.io/kiwigrid/k8s-sidecar
 docker.io/gogs/gogs
 docker.io/snowdreamtech/frpc
 docker.io/sonatype/nexus3
-docker.io/kubernetesui/dashboard
-docker.io/kubernetesui/dashboard-api
-docker.io/kubernetesui/dashboard-web
-docker.io/kubernetesui/metrics-scraper
 docker.io/prom/prometheus
 docker.io/prom/alertmanager
 docker.io/prom/node-exporter
