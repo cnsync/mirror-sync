@@ -58,6 +58,8 @@ docker.io/prom/alertmanager
 docker.io/prom/node-exporter
 docker.io/grafana/grafana
 docker.io/sameersbn/redis
+docker.io/flannel/flannel-cni-plugin
+docker.io/flannel/flannel
 gcr.io/kaniko-project/executor
 gcr.io/go-containerregistry/crane/debug
 docker.io/sameersbn/postgresql
