@@ -1,3 +1,4 @@
+docker.io/kiwigrid/k8s-sidecar
 docker.io/goharbor/nginx-photon
 docker.io/goharbor/harbor-portal
 docker.io/goharbor/harbor-core
@@ -64,7 +65,6 @@ docker.io/flannel/flannel-cni-plugin
 docker.io/flannel/flannel
 docker.io/jenkins/jenkins
 docker.io/jenkins/inbound-agent
-docker.io/kiwigrid/k8s-sidecar
 docker.io/gogs/gogs
 docker.io/snowdreamtech/frpc
 docker.io/sonatype/nexus3
