@@ -18,3 +18,7 @@ registry.k8s.io/sig-storage/csi-provisioner
 registry.k8s.io/sig-storage/csi-snapshotter
 registry.k8s.io/sig-storage/csi-node-driver-registrar
 registry.k8s.io/prometheus-adapter/prometheus-adapter
+ghcr.io/dexidp/dex
+gcr.io/kaniko-project/executor
+gcr.io/go-containerregistry/crane/debug
+ghcr.io/external-secrets/external-secrets
