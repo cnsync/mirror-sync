@@ -34,7 +34,6 @@ docker.rainbond.cc/flannel/flannel-cni-plugin
 docker.rainbond.cc/flannel/flannel
 docker.rainbond.cc/jenkins/jenkins
 docker.rainbond.cc/jenkins/inbound-agent
-docker.rainbond.cc/gogs/gogs
 docker.rainbond.cc/snowdreamtech/frpc
 docker.rainbond.cc/sonatype/nexus3
 docker.rainbond.cc/prom/prometheus
