@@ -12,3 +12,6 @@ registry.k8s.io/kube-state-metrics/kube-state-metrics
 registry.k8s.io/ingress-nginx/controller
 registry.k8s.io/ingress-nginx/kube-webhook-certgen
 registry.k8s.io/sig-storage/nfs-subdir-external-provisioner
+ghcr.io/dexidp/dex
+gcr.io/kaniko-project/executor
+gcr.io/go-containerregistry/crane/debug
