@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"regexp"
 	"sort"
 	"strings"
 	"sync"
@@ -30,17 +31,17 @@ func main() {
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:  "mirror",
-				Value: "https://raw.githubusercontent.com/cnsync/mirror-sync/main/mirrors-docker.txt",
+				Value: "https://ghp.ci/https://raw.githubusercontent.com/cnsync/mirror-sync/main/private-mirrors.txt",
 				Usage: "name storage address of the mirror to be synchronized",
 			},
 			&cli.IntFlag{
 				Name:  "concurrency",
-				Value: 5,
+				Value: 10,
 				Usage: "number of concurrent requests",
 			},
 			&cli.StringFlag{
 				Name:  "hub",
-				Value: "docker.io/cnsync",
+				Value: "registry.cn-hangzhou.aliyuncs.com/grove",
 				Usage: "destination hub for synchronization",
 			},
 		},
@@ -118,8 +119,28 @@ func syncImages(mirrorCtx []string, hub string, maxConcurrency int) {
 
 func getValidTags(tags []string) []string {
 	var validTags []string
+	// 定义正则表达式
+	// 匹配 40 位十六进制字符串，允许后缀 3d5394a7e7072bc7754e5ce071bc6661d07da3e5  or 05e1a576b6726093a16e74fa31ef133f7a1ac6df-***
+	reHex := regexp.MustCompile(`^[a-f0-9]{40}(-[a-zA-Z0-9]+)?$`)
+
+	// 匹配任意字符后接40位十六进制字符串 amd64-0c1a1a690a12a50a35455ad8407c42edcf106ea0
+	reCustom := regexp.MustCompile(`^.+-[a-f0-9]{40}$`)
+
+	// 匹配日期时间格式，支持不同小数位 2020-01-13_11-17-25.346_PST
+	reDateTime := regexp.MustCompile(`^\d{4}-\d{2}-\d{2}_\d{2}-\d{2}-\d{2}(\.\d{1,3})?_[A-Z]{3}$`)
+
 	for _, tag := range tags {
-		if !strings.Contains(tag, ".sig") && !strings.Contains(tag, ".att") {
+		if !strings.Contains(tag, ".sig") && // sha256-5415254e5d2545e2cf1256c17785a963f7e37a1f50cd251ba1da2a32a9fbb09d.sig
+			!strings.Contains(tag, "sha256-") && // sha256-5415254e5d2545e2cf1256c17785a963f7e37a1f50cd251ba1da2a32a9fbb09d
+			!strings.Contains(tag, ".att") &&
+			!strings.Contains(tag, "arm") &&
+			!strings.Contains(tag, "arm64") &&
+			!strings.Contains(tag, "windows") &&
+			!strings.Contains(tag, "nanoserver") &&
+			!strings.Contains(tag, "windowsservercore") &&
+			!reHex.MatchString(tag) &&
+			!reDateTime.MatchString(tag) &&
+			!reCustom.MatchString(tag) {
 			validTags = append(validTags, tag)
 		}
 	}
