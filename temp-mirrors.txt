@@ -1,4 +1,3 @@
-docker.rainbond.cc/osixia/keepalived
 docker.rainbond.cc/calico/ctl
 docker.rainbond.cc/calico/cni
 docker.rainbond.cc/calico/node
