@@ -15,7 +15,9 @@ docker.rainbond.cc/tomcat
 docker.rainbond.cc/traefik
 docker.rainbond.cc/haproxy
 docker.rainbond.cc/consul
-docker.rainbond.cc/jenkins
+docker.rainbond.cc/jenkins/jenkins
+docker.rainbond.cc/jenkins/inbound-agent
+docker.rainbond.cc/kiwigrid/k8s-sidecar
 docker.rainbond.cc/sonarqube
 docker.rainbond.cc/golang
 docker.rainbond.cc/python
@@ -39,7 +41,6 @@ docker.rainbond.cc/grafana/loki
 docker.rainbond.cc/grafana/promtail
 docker.rainbond.cc/fluent/fluentd
 docker.rainbond.cc/gitea/gitea
-docker.rainbond.cc/jenkins/inbound-agent
 docker.rainbond.cc/longhornio/longhorn-engine
 docker.rainbond.cc/longhornio/longhorn-manager
 docker.rainbond.cc/longhornio/longhorn-ui
@@ -62,10 +63,10 @@ docker.rainbond.cc/goharbor/redis-photon
 docker.rainbond.cc/goharbor/registry-photon
 docker.rainbond.cc/goharbor/trivy-adapter-photon
 docker.rainbond.cc/osixia/keepalived
+docker.rainbond.cc/flannel/flannel-cni-plugin
+docker.rainbond.cc/flannel/flannel
 docker.rainbond.cc/calico/ctl
 docker.rainbond.cc/calico/cni
 docker.rainbond.cc/calico/node
 docker.rainbond.cc/calico/typha
 docker.rainbond.cc/calico/kube-controllers
-docker.rainbond.cc/flannel/flannel-cni-plugin
-docker.rainbond.cc/flannel/flannel
