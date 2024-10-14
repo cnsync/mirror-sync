@@ -1,7 +1,7 @@
 docker.rainbond.cc/flannel/flannel-cni-plugin
 docker.rainbond.cc/flannel/flannel
+docker.rainbond.cc/calico/kube-controllers
+docker.rainbond.cc/calico/typha
 docker.rainbond.cc/calico/ctl
 docker.rainbond.cc/calico/cni
 docker.rainbond.cc/calico/node
-docker.rainbond.cc/calico/typha
-docker.rainbond.cc/calico/kube-controllers
