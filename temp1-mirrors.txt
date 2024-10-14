@@ -7,3 +7,4 @@ docker.rainbond.cc/goharbor/harbor-registryctl
 docker.rainbond.cc/goharbor/redis-photon
 docker.rainbond.cc/goharbor/registry-photon
 docker.rainbond.cc/goharbor/trivy-adapter-photon
+docker.rainbond.cc/goharbor/nginx-photon
