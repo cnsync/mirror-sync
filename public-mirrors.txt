@@ -15,3 +15,5 @@ registry.k8s.io/sig-storage/nfs-subdir-external-provisioner
 ghcr.io/dexidp/dex
 gcr.io/kaniko-project/executor
 gcr.io/go-containerregistry/crane/debug
+docker.elastic.co/elasticsearch/elasticsearch
+docker.elastic.co/kibana/kibana
