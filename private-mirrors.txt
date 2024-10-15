@@ -68,5 +68,3 @@ docker.rainbond.cc/calico/cni
 docker.rainbond.cc/calico/node
 docker.rainbond.cc/calico/typha
 docker.rainbond.cc/calico/kube-controllers
-docker.elastic.co/elasticsearch/elasticsearch
-docker.elastic.co/kibana/kibana
