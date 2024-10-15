@@ -30,8 +30,6 @@ docker.rainbond.cc/debian
 docker.rainbond.cc/docker
 docker.rainbond.cc/busybox
 docker.rainbond.cc/registry
-docker.rainbond.cc/elasticsearch
-docker.rainbond.cc/kibana
 docker.rainbond.cc/logstash
 docker.rainbond.cc/nats
 docker.rainbond.cc/vault
@@ -70,3 +68,5 @@ docker.rainbond.cc/calico/cni
 docker.rainbond.cc/calico/node
 docker.rainbond.cc/calico/typha
 docker.rainbond.cc/calico/kube-controllers
+docker.elastic.co/elasticsearch/elasticsearch
+docker.elastic.co/kibana/kibana
