@@ -1,3 +1,4 @@
+docker.rainbond.cc/bitnami/os-shell
 docker.rainbond.cc/bitnami/mysql
 docker.rainbond.cc/bitnami/mysqld-exporter
 docker.rainbond.cc/bitnami/redis
