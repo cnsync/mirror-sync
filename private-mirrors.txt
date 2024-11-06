@@ -1,3 +1,8 @@
+quay.io/prometheus-operator/prometheus-config-reloader
+quay.io/prometheus/node-exporter
+quay.io/prometheus/prometheus
+quay.io/thanos/thanos
+quay.io/prometheus-operator/prometheus-operator
 docker.rainbond.cc/bitnami/os-shell
 docker.rainbond.cc/bitnami/mysql
 docker.rainbond.cc/bitnami/mysqld-exporter
