@@ -1,4 +1,6 @@
 docker.rainbond.cc/bitnami/thanos
+quay.io/minio/minio
+quay.io/minio/mc
 quay.io/prometheus-operator/prometheus-config-reloader
 quay.io/prometheus/node-exporter
 quay.io/prometheus/prometheus
