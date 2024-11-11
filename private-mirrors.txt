@@ -1,3 +1,4 @@
+docker.rainbond.cc/bitnami/thanos
 quay.io/prometheus-operator/prometheus-config-reloader
 quay.io/prometheus/node-exporter
 quay.io/prometheus/prometheus
